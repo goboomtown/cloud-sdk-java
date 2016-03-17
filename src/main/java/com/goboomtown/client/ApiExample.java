@@ -1,8 +1,9 @@
 package com.goboomtown.client;
 
 import io.swagger.client.ApiException;
-import io.swagger.client.model.*;
-import org.slf4j.helpers.MessageFormatter;
+import io.swagger.client.model.Member;
+import io.swagger.client.model.MemberLocation;
+import io.swagger.client.model.MemberUser;
 
 import java.util.List;
 
@@ -30,7 +31,7 @@ public class ApiExample {
     private void exampleGetProvider() throws ApiException {
         Provider provider = Provider.getInstance();
 
-        println("Provider: {} ({}):", provider.getName(), provider.getId());
+        println(String.format("Provider: %s (%s):", provider.getName(), provider.getId()));
 
         println("\tMembers:");
         for (Merchant merchant : provider.getMerchants()) {
@@ -196,45 +197,42 @@ public class ApiExample {
 
 
     /**
-     * Formatted string printer.
-     *
-     * @param format String format, {} refers to variable arguments
-     * @param args Variable arguments, replaces {} in {@code format}
+     * System.out.println wrapper.
      */
-    private static void println(String format, Object... args) {
-        System.out.println(MessageFormatter.arrayFormat(format, args).getMessage());
+    private static void println(String format) {
+        System.out.println(format);
     }
 
     /**
      * Issue debug printer
      */
     private static void printIssue(Issue issue, String indent, boolean withDetail) throws ApiException {
-        println("{}{} ({})", indent, issue.getId(), issue.getReferenceNum());
-        println("{}\tcreated: {}", indent, Constants.DATE_FORMAT_DISPLAY.format(issue.getCreated()));
-        println("{}\tcategory: {}", indent, issue.getCategory());
-        println("{}\tstatus: {}", indent, issue.getStatus());
-        println("{}\tresolution: {}", indent, issue.getResolution());
-        println("{}\tmemberId: {}", indent, issue.getMembersId());
-        println("{}\tmemberUserId: {}", indent, issue.getMembersUsersId());
-        println("{}\tmemberLocId: {}", indent, issue.getMembersLocationsId());
+        println(String.format("%s%s (%s)", indent, issue.getId(), issue.getReferenceNum()));
+        println(String.format("%s\tcreated: %s", indent, Constants.DATE_FORMAT_DISPLAY.format(issue.getCreated())));
+        println(String.format("%s\tcategory: %s", indent, issue.getCategory()));
+        println(String.format("%s\tstatus: %s", indent, issue.getStatus()));
+        println(String.format("%s\tresolution: %s", indent, issue.getResolution()));
+        println(String.format("%s\tmemberId: %s", indent, issue.getMembersId()));
+        println(String.format("%s\tmemberUserId: %s", indent, issue.getMembersUsersId()));
+        println(String.format("%s\tmemberLocId: %s", indent, issue.getMembersLocationsId()));
 
         if (withDetail) {
-            println("{}\tLogs:", indent);
+            println(String.format("%s\tLogs:", indent));
             for (Issue.Log log : issue.getLogs()) {
-                println("{}\t\t{}", indent, Constants.DATE_FORMAT_DISPLAY.format(log.getCreated()));
-                println("{}\t\t\tnotes: {}", indent, log.getNotes());
-                println("{}\t\t\tdiffLog: {}", indent, log.getDiffLog());
+                println(String.format("%s\t\t%s", indent, Constants.DATE_FORMAT_DISPLAY.format(log.getCreated())));
+                println(String.format("%s\t\t\tnotes: %s", indent, log.getNotes()));
+                println(String.format("%s\t\t\tdiffLog: %s", indent, log.getDiffLog()));
             }
 
-            println("{}\tStatus history:", indent);
+            println(String.format("%s\tStatus history:", indent));
             for (Issue.StatusHistory statusHistory : issue.getStatusHistory()) {
-                println("{}\t\t{}", indent, Constants.DATE_FORMAT_DISPLAY.format(statusHistory.getCreated()));
-                println("{}\t\t\tstatus: {}", indent, statusHistory.getStatus());
-                println("{}\t\t\ttype: {}", indent, statusHistory.getType());
-                println("{}\t\t\tresolution: {}", indent, statusHistory.getResolution());
-                println("{}\t\t\tscheduledTime: {}", indent, statusHistory.getScheduledTime());
-                println("{}\t\t\thistoryText: {}", indent, statusHistory.getHistorySummaryText());
-                println("{}\t\t\tsummaryText: {}", indent, statusHistory.getTicketSummaryText());
+                println(String.format("%s\t\t%s", indent, Constants.DATE_FORMAT_DISPLAY.format(statusHistory.getCreated())));
+                println(String.format("%s\t\t\tstatus: %s", indent, statusHistory.getStatus()));
+                println(String.format("%s\t\t\ttype: %s", indent, statusHistory.getType()));
+                println(String.format("%s\t\t\tresolution: %s", indent, statusHistory.getResolution()));
+                println(String.format("%s\t\t\tscheduledTime: %s", indent, statusHistory.getScheduledTime()));
+                println(String.format("%s\t\t\thistoryText: %s", indent, statusHistory.getHistorySummaryText()));
+                println(String.format("%s\t\t\tsummaryText: %s", indent, statusHistory.getTicketSummaryText()));
             }
         }
     }
