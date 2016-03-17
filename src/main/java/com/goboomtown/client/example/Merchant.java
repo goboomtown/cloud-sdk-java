@@ -1,5 +1,6 @@
-package com.goboomtown.client;
+package com.goboomtown.client.example;
 
+import com.goboomtown.sdk.ApiUtil;
 import io.swagger.client.ApiException;
 import io.swagger.client.model.*;
 
@@ -135,12 +136,12 @@ public final class Merchant {
      * @return Issues belonging to this merchant.
      * @throws ApiException On API call failure
      */
-    public List<Issue> getIssues(Integer limit, Integer start) throws ApiException {
-        List<Issue> issues = new ArrayList<Issue>();
+    public List<com.goboomtown.client.example.Issue> getIssues(Integer limit, Integer start) throws ApiException {
+        List<com.goboomtown.client.example.Issue> issues = new ArrayList<com.goboomtown.client.example.Issue>();
         IssueResponse issuesResponse = ApiUtil.getIssuesApi().getIssues(limit, start, id, null, null);
         if (issuesResponse.getSuccess() != null && issuesResponse.getSuccess()) {
             for (io.swagger.client.model.Issue entity : issuesResponse.getResults()) {
-                issues.add(Issue.fromEntity(entity));
+                issues.add(com.goboomtown.client.example.Issue.fromEntity(entity));
             }
         } else {
             throw new ApiException(issuesResponse.getMessage());
@@ -253,12 +254,12 @@ public final class Merchant {
          * @return Issues belonging to this merchant+location.
          * @throws ApiException On API call failure
          */
-        public List<Issue> getIssues(Integer limit, Integer start) throws ApiException {
-            List<Issue> issues = new ArrayList<Issue>();
+        public List<com.goboomtown.client.example.Issue> getIssues(Integer limit, Integer start) throws ApiException {
+            List<com.goboomtown.client.example.Issue> issues = new ArrayList<com.goboomtown.client.example.Issue>();
             IssueResponse issuesResponse = ApiUtil.getIssuesApi().getIssues(limit, start, membersId, null, id);
             if (issuesResponse.getSuccess() != null && issuesResponse.getSuccess()) {
                 for (io.swagger.client.model.Issue entity : issuesResponse.getResults()) {
-                    issues.add(Issue.fromEntity(entity));
+                    issues.add(com.goboomtown.client.example.Issue.fromEntity(entity));
                 }
             } else {
                 throw new ApiException(issuesResponse.getMessage());
@@ -363,12 +364,12 @@ public final class Merchant {
          * @return Issues belonging to this merchant+user.
          * @throws ApiException On API call failure
          */
-        public List<Issue> getIssues(Integer limit, Integer start) throws ApiException {
-            List<Issue> issues = new ArrayList<Issue>();
+        public List<com.goboomtown.client.example.Issue> getIssues(Integer limit, Integer start) throws ApiException {
+            List<com.goboomtown.client.example.Issue> issues = new ArrayList<com.goboomtown.client.example.Issue>();
             IssueResponse issuesResponse = ApiUtil.getIssuesApi().getIssues(limit, start, membersId, id, null);
             if (issuesResponse.getSuccess() != null && issuesResponse.getSuccess()) {
                 for (io.swagger.client.model.Issue entity : issuesResponse.getResults()) {
-                    issues.add(Issue.fromEntity(entity));
+                    issues.add(com.goboomtown.client.example.Issue.fromEntity(entity));
                 }
             } else {
                 throw new ApiException(issuesResponse.getMessage());

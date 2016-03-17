@@ -1,18 +1,40 @@
-package com.goboomtown.client;
+package com.goboomtown.client.example;
 
+import com.goboomtown.sdk.ApiUtil;
 import io.swagger.client.ApiException;
 import io.swagger.client.model.Member;
 import io.swagger.client.model.MemberLocation;
 import io.swagger.client.model.MemberUser;
 
+import java.io.UnsupportedEncodingException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 /**
  * Example Boomtown Provider API client.
- *
- * @see Constants for configuration
  */
 public class ApiExample {
+    private static final String TOKEN = "__API_TOKEN__";
+    private static final String KEY = "__API_SECRET_KEY__";
+
+    public static final DateFormat DATE_FORMAT_DISPLAY = new SimpleDateFormat("M/d/yyyy h:mm:ss a");
+
+    static {
+        // statically initialize ApiUtil
+        try {
+            ApiUtil.initialize(TOKEN, KEY);
+        } catch (NoSuchAlgorithmException e) {
+            throw new ExceptionInInitializerError(e);
+        } catch (UnsupportedEncodingException e) {
+            throw new ExceptionInInitializerError(e);
+        } catch (InvalidKeyException e) {
+            throw new ExceptionInInitializerError(e);
+        }
+    }
+
     /**
      * Wrapper for {@code Provider.getInstance()}.
      *
@@ -208,7 +230,7 @@ public class ApiExample {
      */
     private static void printIssue(Issue issue, String indent, boolean withDetail) throws ApiException {
         println(String.format("%s%s (%s)", indent, issue.getId(), issue.getReferenceNum()));
-        println(String.format("%s\tcreated: %s", indent, Constants.DATE_FORMAT_DISPLAY.format(issue.getCreated())));
+        println(String.format("%s\tcreated: %s", indent, DATE_FORMAT_DISPLAY.format(issue.getCreated())));
         println(String.format("%s\tcategory: %s", indent, issue.getCategory()));
         println(String.format("%s\tstatus: %s", indent, issue.getStatus()));
         println(String.format("%s\tresolution: %s", indent, issue.getResolution()));
@@ -219,14 +241,14 @@ public class ApiExample {
         if (withDetail) {
             println(String.format("%s\tLogs:", indent));
             for (Issue.Log log : issue.getLogs()) {
-                println(String.format("%s\t\t%s", indent, Constants.DATE_FORMAT_DISPLAY.format(log.getCreated())));
+                println(String.format("%s\t\t%s", indent, DATE_FORMAT_DISPLAY.format(log.getCreated())));
                 println(String.format("%s\t\t\tnotes: %s", indent, log.getNotes()));
                 println(String.format("%s\t\t\tdiffLog: %s", indent, log.getDiffLog()));
             }
 
             println(String.format("%s\tStatus history:", indent));
             for (Issue.StatusHistory statusHistory : issue.getStatusHistory()) {
-                println(String.format("%s\t\t%s", indent, Constants.DATE_FORMAT_DISPLAY.format(statusHistory.getCreated())));
+                println(String.format("%s\t\t%s", indent, DATE_FORMAT_DISPLAY.format(statusHistory.getCreated())));
                 println(String.format("%s\t\t\tstatus: %s", indent, statusHistory.getStatus()));
                 println(String.format("%s\t\t\ttype: %s", indent, statusHistory.getType()));
                 println(String.format("%s\t\t\tresolution: %s", indent, statusHistory.getResolution()));

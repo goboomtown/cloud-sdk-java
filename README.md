@@ -11,8 +11,8 @@ To get started:
  - Clone this repository
  - Import as a Gradle project to your IDE
  - Generate API keys from the Boomtown Admin Portal
- - Configure the API keys in `com.goboomtown.client.Constants`
- - Review examples in `com.goboomtown.client.ApiExample`
+ - Configure the API keys in `Constants`
+ - Review examples in `ApiExample`
 
 ## API Key Generation
 To generate an API access token and private-key:
@@ -28,11 +28,11 @@ To generate an API access token and private-key:
 ## Java SDK Configuration
 Prior to using the API, you must configure the Java sources with the generated access token and private-key:
  - Follow the *Getting Started* section, for importing the project into your IDE
- - Set `com.goboomtown.client.Constants.TOKEN` equal to the access token generated in the Admin Portal.
- - Set `com.goboomtown.client.Constants.KEY` equal to the private-key generated in the Admin Portal.
+ - Set `Constants.TOKEN` equal to the access token generated in the Admin Portal.
+ - Set `Constants.KEY` equal to the private-key generated in the Admin Portal.
 
 ## Examples
-See `com.goboomtown.client.ApiExample` for examples interfacing with the API.
+See `ApiExample` for examples interfacing with the API.
 
 ### ApiExample.main(String[])
 By default, running `ApiExample.main(String[])` will dump/output the provider's information, including it's associated merchants.

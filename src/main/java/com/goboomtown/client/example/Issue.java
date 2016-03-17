@@ -1,5 +1,6 @@
-package com.goboomtown.client;
+package com.goboomtown.client.example;
 
+import com.goboomtown.sdk.ApiUtil;
 import io.swagger.client.ApiException;
 import io.swagger.client.model.*;
 
