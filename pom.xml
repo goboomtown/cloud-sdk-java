@@ -128,22 +128,6 @@
     </plugins>
   </build>
   <dependencies>
-	<!-- logging -->
-	<dependency>
-		<groupId>org.slf4j</groupId>
-		<artifactId>slf4j-api</artifactId>
-		<version>${slf4j_version}</version>
-		<scope>compile</scope>
-	</dependency>
-	<dependency>
-		<groupId>org.slf4j</groupId>
-		<artifactId>slf4j-jdk14</artifactId>
-		<version>${slf4j_version}</version>
-		<scope>runtime</scope>
-	</dependency>
-
-	<!-- code gen: -->
-
     <dependency>
       <groupId>io.swagger</groupId>
       <artifactId>swagger-annotations</artifactId>

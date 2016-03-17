@@ -99,7 +99,6 @@ ext {
     jersey_version = "2.22"
     jodatime_version = "2.3"
     junit_version = "4.12"
-    slf4j_version = "1.7.19"
 }
 
 dependencies {
@@ -113,7 +112,5 @@ dependencies {
     compile "com.fasterxml.jackson.datatype:jackson-datatype-joda:2.1.5"
     compile "joda-time:joda-time:$jodatime_version"
     compile "com.brsanthu:migbase64:2.2"
-    compile "org.slf4j:slf4j-api:$slf4j_version"
-    compile "org.slf4j:slf4j-jdk14:$slf4j_version"
     testCompile "junit:junit:$junit_version"
 }
