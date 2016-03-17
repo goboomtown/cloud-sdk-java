@@ -8,8 +8,6 @@ import io.swagger.client.api.MerchantsApi;
 import io.swagger.client.api.ProvidersApi;
 import io.swagger.client.auth.ApiKeyAuth;
 import org.glassfish.jersey.uri.internal.JerseyUriBuilder;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import javax.crypto.Mac;
 import javax.ws.rs.core.GenericType;
@@ -26,8 +24,6 @@ import java.util.Map;
  * Created by jd on 3/15/2016.
  */
 public class ApiUtil {
-    private static final Logger logger = LoggerFactory.getLogger(ApiUtil.class);
-
     private static final String BASE_PATH = "/api/v2";
 
     private static final Mac sha256_HMAC;
@@ -45,7 +41,6 @@ public class ApiUtil {
     }
 
     private static String encode(String data) throws Exception {
-        logger.trace("encode({})", data);
         return DatatypeConverter.printBase64Binary(sha256_HMAC.doFinal(data.getBytes("UTF-8")));
     }
 
