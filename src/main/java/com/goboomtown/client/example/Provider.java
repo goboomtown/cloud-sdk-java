@@ -1,8 +1,8 @@
 package com.goboomtown.client.example;
 
 import com.goboomtown.sdk.ApiUtil;
-import io.swagger.client.ApiException;
-import io.swagger.client.model.*;
+import com.goboomtown.sdk.swagger.ApiException;
+import com.goboomtown.sdk.swagger.model.*;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -214,7 +214,7 @@ public final class Provider {
         List<com.goboomtown.client.example.Issue> issues = new ArrayList<com.goboomtown.client.example.Issue>();
         IssueResponse issuesResponse = ApiUtil.getIssuesApi().getIssues(limit, start, null, null, null);
         if (issuesResponse.getSuccess() != null && issuesResponse.getSuccess()) {
-            for (io.swagger.client.model.Issue entity : issuesResponse.getResults()) {
+            for (com.goboomtown.sdk.swagger.model.Issue entity : issuesResponse.getResults()) {
                 issues.add(com.goboomtown.client.example.Issue.fromEntity(entity));
             }
         } else {
@@ -240,7 +240,7 @@ public final class Provider {
     /**
      * Parses the API model response into this OOP lazy-fetched model+controller.
      */
-    public static Provider fromEntity(io.swagger.client.model.Provider entity) {
+    public static Provider fromEntity(com.goboomtown.sdk.swagger.model.Provider entity) {
         return new Provider(
                 entity.getId(),
                 entity.getName(),
@@ -421,7 +421,7 @@ public final class Provider {
         /**
          * Parses the API model response into this OOP lazy-fetched model+controller.
          */
-        public static Team fromEntity(io.swagger.client.model.ProviderTeam entity) {
+        public static Team fromEntity(com.goboomtown.sdk.swagger.model.ProviderTeam entity) {
             return new Team(
                     entity.getId(),
                     entity.getName(),

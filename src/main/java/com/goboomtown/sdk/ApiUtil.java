@@ -1,12 +1,12 @@
 package com.goboomtown.sdk;
 
-import io.swagger.client.ApiClient;
-import io.swagger.client.ApiException;
-import io.swagger.client.Pair;
-import io.swagger.client.api.IssuesApi;
-import io.swagger.client.api.MerchantsApi;
-import io.swagger.client.api.ProvidersApi;
-import io.swagger.client.auth.ApiKeyAuth;
+import com.goboomtown.sdk.swagger.ApiClient;
+import com.goboomtown.sdk.swagger.ApiException;
+import com.goboomtown.sdk.swagger.Pair;
+import com.goboomtown.sdk.swagger.api.IssuesApi;
+import com.goboomtown.sdk.swagger.api.MerchantsApi;
+import com.goboomtown.sdk.swagger.api.ProvidersApi;
+import com.goboomtown.sdk.swagger.auth.ApiKeyAuth;
 import org.glassfish.jersey.uri.internal.JerseyUriBuilder;
 
 import javax.crypto.Mac;

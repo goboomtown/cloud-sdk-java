@@ -1,10 +1,10 @@
 package com.goboomtown.client.example;
 
 import com.goboomtown.sdk.ApiUtil;
-import io.swagger.client.ApiException;
-import io.swagger.client.model.Member;
-import io.swagger.client.model.MemberLocation;
-import io.swagger.client.model.MemberUser;
+import com.goboomtown.sdk.swagger.ApiException;
+import com.goboomtown.sdk.swagger.model.Member;
+import com.goboomtown.sdk.swagger.model.MemberLocation;
+import com.goboomtown.sdk.swagger.model.MemberUser;
 
 import java.io.UnsupportedEncodingException;
 import java.security.InvalidKeyException;

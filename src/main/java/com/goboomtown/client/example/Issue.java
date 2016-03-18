@@ -1,8 +1,8 @@
 package com.goboomtown.client.example;
 
 import com.goboomtown.sdk.ApiUtil;
-import io.swagger.client.ApiException;
-import io.swagger.client.model.*;
+import com.goboomtown.sdk.swagger.ApiException;
+import com.goboomtown.sdk.swagger.model.*;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -303,7 +303,7 @@ public final class Issue {
     /**
      * Parses the API model response into this OOP lazy-fetched model+controller.
      */
-    public static Issue fromEntity(io.swagger.client.model.Issue entity) {
+    public static Issue fromEntity(com.goboomtown.sdk.swagger.model.Issue entity) {
         return new Issue(
                 entity.getId(),
                 entity.getReferenceNum(),
@@ -337,7 +337,7 @@ public final class Issue {
      * @param entity The latest entity from the server
      * @return The same instance as passed ({@code issue})
      */
-    public static Issue updateEntity(Issue issue, io.swagger.client.model.Issue entity) {
+    public static Issue updateEntity(Issue issue, com.goboomtown.sdk.swagger.model.Issue entity) {
         return issue.updateModel(
                 entity.getId(),
                 entity.getReferenceNum(),
@@ -411,7 +411,7 @@ public final class Issue {
         }
 
 
-        public static Log fromEntity(io.swagger.client.model.IssueLog entity) {
+        public static Log fromEntity(com.goboomtown.sdk.swagger.model.IssueLog entity) {
             return new Log(
                     entity.getId(),
                     entity.getIssuesId(),
@@ -473,7 +473,7 @@ public final class Issue {
         }
 
 
-        public static StatusHistory fromEntity(io.swagger.client.model.IssueStatus entity) {
+        public static StatusHistory fromEntity(com.goboomtown.sdk.swagger.model.IssueStatus entity) {
             return new StatusHistory(
                     entity.getCreated(),
                     entity.getType(),

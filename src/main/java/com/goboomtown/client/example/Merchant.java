@@ -1,8 +1,8 @@
 package com.goboomtown.client.example;
 
 import com.goboomtown.sdk.ApiUtil;
-import io.swagger.client.ApiException;
-import io.swagger.client.model.*;
+import com.goboomtown.sdk.swagger.ApiException;
+import com.goboomtown.sdk.swagger.model.*;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -140,7 +140,7 @@ public final class Merchant {
         List<com.goboomtown.client.example.Issue> issues = new ArrayList<com.goboomtown.client.example.Issue>();
         IssueResponse issuesResponse = ApiUtil.getIssuesApi().getIssues(limit, start, id, null, null);
         if (issuesResponse.getSuccess() != null && issuesResponse.getSuccess()) {
-            for (io.swagger.client.model.Issue entity : issuesResponse.getResults()) {
+            for (com.goboomtown.sdk.swagger.model.Issue entity : issuesResponse.getResults()) {
                 issues.add(com.goboomtown.client.example.Issue.fromEntity(entity));
             }
         } else {
@@ -153,7 +153,7 @@ public final class Merchant {
     /**
      * Parses the API model response into this OOP lazy-fetched model+controller.
      */
-    public static Merchant fromEntity(io.swagger.client.model.Member entity) {
+    public static Merchant fromEntity(com.goboomtown.sdk.swagger.model.Member entity) {
         return new Merchant(
                 entity.getId(),
                 entity.getName(),
@@ -258,7 +258,7 @@ public final class Merchant {
             List<com.goboomtown.client.example.Issue> issues = new ArrayList<com.goboomtown.client.example.Issue>();
             IssueResponse issuesResponse = ApiUtil.getIssuesApi().getIssues(limit, start, membersId, null, id);
             if (issuesResponse.getSuccess() != null && issuesResponse.getSuccess()) {
-                for (io.swagger.client.model.Issue entity : issuesResponse.getResults()) {
+                for (com.goboomtown.sdk.swagger.model.Issue entity : issuesResponse.getResults()) {
                     issues.add(com.goboomtown.client.example.Issue.fromEntity(entity));
                 }
             } else {
@@ -271,7 +271,7 @@ public final class Merchant {
         /**
          * Parses the API model response into this OOP lazy-fetched model+controller.
          */
-        public static Location fromEntity(io.swagger.client.model.MemberLocation entity) {
+        public static Location fromEntity(com.goboomtown.sdk.swagger.model.MemberLocation entity) {
             return new Location(
                     entity.getId(),
                     entity.getMembersId(),
@@ -368,7 +368,7 @@ public final class Merchant {
             List<com.goboomtown.client.example.Issue> issues = new ArrayList<com.goboomtown.client.example.Issue>();
             IssueResponse issuesResponse = ApiUtil.getIssuesApi().getIssues(limit, start, membersId, id, null);
             if (issuesResponse.getSuccess() != null && issuesResponse.getSuccess()) {
-                for (io.swagger.client.model.Issue entity : issuesResponse.getResults()) {
+                for (com.goboomtown.sdk.swagger.model.Issue entity : issuesResponse.getResults()) {
                     issues.add(com.goboomtown.client.example.Issue.fromEntity(entity));
                 }
             } else {
@@ -381,7 +381,7 @@ public final class Merchant {
         /**
          * Parses the API model response into this OOP lazy-fetched model+controller.
          */
-        public static User fromEntity(io.swagger.client.model.MemberUser entity) {
+        public static User fromEntity(com.goboomtown.sdk.swagger.model.MemberUser entity) {
             return new User(
                     entity.getId(),
                     entity.getMembersId(),
