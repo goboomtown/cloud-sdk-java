@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-18T11:59:53.569-06:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-23T11:55:09.982-06:00")
 public class MemberLocation   {
   
   private String id = null;
@@ -28,14 +28,14 @@ public class MemberLocation   {
 
   
   /**
-   * Primary key.
+   * Primary key
    **/
   public MemberLocation id(String id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Primary key.")
+  @ApiModelProperty(example = "null", value = "Primary key")
   @JsonProperty("id")
   public String getId() {
     return id;
@@ -46,14 +46,14 @@ public class MemberLocation   {
 
   
   /**
-   * The primary key of the related *Merchant*.
+   * The primary key of the related *Merchant*
    **/
   public MemberLocation membersId(String membersId) {
     this.membersId = membersId;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "The primary key of the related *Merchant*.")
+  @ApiModelProperty(example = "null", value = "The primary key of the related *Merchant*")
   @JsonProperty("members_id")
   public String getMembersId() {
     return membersId;
@@ -64,14 +64,14 @@ public class MemberLocation   {
 
   
   /**
-   * Street address.
+   * Address 1
    **/
   public MemberLocation street1(String street1) {
     this.street1 = street1;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Street address.")
+  @ApiModelProperty(example = "null", required = true, value = "Address 1")
   @JsonProperty("street_1")
   public String getStreet1() {
     return street1;
@@ -82,14 +82,14 @@ public class MemberLocation   {
 
   
   /**
-   * Street address continued.
+   * Address 2
    **/
   public MemberLocation street2(String street2) {
     this.street2 = street2;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Street address continued.")
+  @ApiModelProperty(example = "null", value = "Address 2")
   @JsonProperty("street_2")
   public String getStreet2() {
     return street2;
@@ -100,14 +100,14 @@ public class MemberLocation   {
 
   
   /**
-   * City.
+   * City
    **/
   public MemberLocation city(String city) {
     this.city = city;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "City.")
+  @ApiModelProperty(example = "null", required = true, value = "City")
   @JsonProperty("city")
   public String getCity() {
     return city;
@@ -118,14 +118,14 @@ public class MemberLocation   {
 
   
   /**
-   * State Identifier (2 char code).
+   * State/Province (2 char code)
    **/
   public MemberLocation state(String state) {
     this.state = state;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "State Identifier (2 char code).")
+  @ApiModelProperty(example = "null", required = true, value = "State/Province (2 char code)")
   @JsonProperty("state")
   public String getState() {
     return state;
@@ -136,14 +136,14 @@ public class MemberLocation   {
 
   
   /**
-   * Postal Code.
+   * ZIP/Postal Code
    **/
   public MemberLocation zipcode(String zipcode) {
     this.zipcode = zipcode;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Postal Code.")
+  @ApiModelProperty(example = "null", required = true, value = "ZIP/Postal Code")
   @JsonProperty("zipcode")
   public String getZipcode() {
     return zipcode;
@@ -154,14 +154,14 @@ public class MemberLocation   {
 
   
   /**
-   * Latitude.
+   * Latitude
    **/
   public MemberLocation latitude(Double latitude) {
     this.latitude = latitude;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Latitude.")
+  @ApiModelProperty(example = "null", value = "Latitude")
   @JsonProperty("latitude")
   public Double getLatitude() {
     return latitude;
@@ -172,14 +172,14 @@ public class MemberLocation   {
 
   
   /**
-   * Longitude.
+   * Longitude
    **/
   public MemberLocation longitude(Double longitude) {
     this.longitude = longitude;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Longitude.")
+  @ApiModelProperty(example = "null", value = "Longitude")
   @JsonProperty("longitude")
   public Double getLongitude() {
     return longitude;
@@ -190,14 +190,14 @@ public class MemberLocation   {
 
   
   /**
-   * Phone number.
+   * Phone
    **/
   public MemberLocation phone(String phone) {
     this.phone = phone;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Phone number.")
+  @ApiModelProperty(example = "null", value = "Phone")
   @JsonProperty("phone")
   public String getPhone() {
     return phone;
@@ -208,14 +208,14 @@ public class MemberLocation   {
 
   
   /**
-   * Informal reference, an alias.
+   * Informal reference, an alias
    **/
   public MemberLocation siteName(String siteName) {
     this.siteName = siteName;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Informal reference, an alias.")
+  @ApiModelProperty(example = "null", value = "Informal reference, an alias")
   @JsonProperty("site_name")
   public String getSiteName() {
     return siteName;

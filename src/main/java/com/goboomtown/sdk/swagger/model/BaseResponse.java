@@ -12,7 +12,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-18T11:59:53.569-06:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-23T11:55:09.982-06:00")
 public class BaseResponse   {
   
   private Boolean success = null;
@@ -24,14 +24,14 @@ public class BaseResponse   {
 
   
   /**
-   * Indicates success of the operation.
+   * Indicates success of the operation
    **/
   public BaseResponse success(Boolean success) {
     this.success = success;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Indicates success of the operation.")
+  @ApiModelProperty(example = "null", value = "Indicates success of the operation")
   @JsonProperty("success")
   public Boolean getSuccess() {
     return success;
@@ -59,14 +59,14 @@ public class BaseResponse   {
 
   
   /**
-   * Total records available.
+   * Total objects available
    **/
   public BaseResponse totalCount(Integer totalCount) {
     this.totalCount = totalCount;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Total records available.")
+  @ApiModelProperty(example = "null", value = "Total objects available")
   @JsonProperty("totalCount")
   public Integer getTotalCount() {
     return totalCount;
@@ -77,14 +77,14 @@ public class BaseResponse   {
 
   
   /**
-   * Total records retrieved.
+   * Total objects retrieved
    **/
   public BaseResponse returned(Integer returned) {
     this.returned = returned;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Total records retrieved.")
+  @ApiModelProperty(example = "null", value = "Total objects retrieved")
   @JsonProperty("returned")
   public Integer getReturned() {
     return returned;
@@ -95,14 +95,14 @@ public class BaseResponse   {
 
   
   /**
-   * Total pages available.
+   * Total pages available
    **/
   public BaseResponse pages(Integer pages) {
     this.pages = pages;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Total pages available.")
+  @ApiModelProperty(example = "null", value = "Total pages available")
   @JsonProperty("pages")
   public Integer getPages() {
     return pages;

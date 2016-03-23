@@ -177,17 +177,17 @@ public class ApiExample {
 
         Member newMember = new Member();
         newMember.setName("yar name");
-        newMember.setPhone("11235555522");
-        newMember.setZipcode("12345");
-        newMember.setEmail("yar123zzzz@YAR_DOMAIN.me");
+        newMember.setPhone("11235555523");
+        newMember.setZipcode("12346");
+        newMember.setEmail("yar123zzzzz@YAR_DOMAIN.me");
 
         MemberLocation newLocation = new MemberLocation();
-        newLocation.setZipcode("12345");
+        newLocation.setZipcode("12346");
 
         MemberUser newUser = new MemberUser();
         newUser.setFirstName("yar first");
         newUser.setLastName("yar last");
-        newUser.setEmail("yar123zzzz@YAR_DOMAIN.me");
+        newUser.setEmail("yar123zzzzz@YAR_DOMAIN.me");
 
         Provider.CreateMerchantResult result = provider.createMerchant(newMember, newUser, newLocation);
 
@@ -214,6 +214,20 @@ public class ApiExample {
             println(String.format("\t\t\t%s (%s)", user.getFullName(), user.getId()));
         }
 
+        println("");
+    }
+
+    /**
+     * Example of creating a new issue, user, and/or location, which is associated to this provider.
+     *
+     * @throws ApiException On API call failure
+     */
+    private void exampleCreateIssue() throws ApiException {
+        Provider provider = Provider.getInstance();
+
+        println("Create issue:");
+        Issue issue = provider.createIssue("XYZ123", "XYZ123-9ZE", "XYZ123-T7N", null);
+        printIssue(issue, "\t", false);
         println("");
     }
 
@@ -276,5 +290,7 @@ public class ApiExample {
         //api.exampleResolveIssue();
 
         //api.exampleCreateMerchant();
+
+        //api.exampleCreateIssue();
     }
 }

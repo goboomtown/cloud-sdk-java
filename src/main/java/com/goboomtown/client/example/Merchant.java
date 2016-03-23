@@ -149,6 +149,32 @@ public final class Merchant {
         return issues;
     }
 
+    /**
+     * @param newIssue optional/may be null
+     * @return The new/created Issue
+     * @throws ApiException On API call failure
+     */
+    @SuppressWarnings("Duplicates")
+    public Issue createIssue(String userId, String locationId, com.goboomtown.sdk.swagger.model.Issue newIssue) throws ApiException {
+        if (newIssue == null) {
+            newIssue = new com.goboomtown.sdk.swagger.model.Issue();
+        }
+
+        newIssue.setMembersId(id);
+        newIssue.setMembersUsersId(userId);
+        newIssue.setMembersLocationsId(locationId);
+
+        IssueCreateRequest request = new IssueCreateRequest();
+        request.setIssues(newIssue);
+
+        IssueResponse issueResponse = ApiUtil.getIssuesApi().createIssue(request);
+        if (issueResponse.getSuccess() != null && issueResponse.getSuccess() && issueResponse.getResults().size() == 1) {
+            return com.goboomtown.client.example.Issue.fromEntity(issueResponse.getResults().get(0));
+        } else {
+            throw new ApiException(issueResponse.getMessage());
+        }
+    }
+
 
     /**
      * Parses the API model response into this OOP lazy-fetched model+controller.
@@ -267,6 +293,32 @@ public final class Merchant {
             return issues;
         }
 
+        /**
+         * @param newIssue optional/may be null
+         * @return The new/created Issue
+         * @throws ApiException On API call failure
+         */
+        @SuppressWarnings("Duplicates")
+        public Issue createIssue(String userId, com.goboomtown.sdk.swagger.model.Issue newIssue) throws ApiException {
+            if (newIssue == null) {
+                newIssue = new com.goboomtown.sdk.swagger.model.Issue();
+            }
+
+            newIssue.setMembersId(membersId);
+            newIssue.setMembersUsersId(userId);
+            newIssue.setMembersLocationsId(id);
+
+            IssueCreateRequest request = new IssueCreateRequest();
+            request.setIssues(newIssue);
+
+            IssueResponse issueResponse = ApiUtil.getIssuesApi().createIssue(request);
+            if (issueResponse.getSuccess() != null && issueResponse.getSuccess() && issueResponse.getResults().size() == 1) {
+                return com.goboomtown.client.example.Issue.fromEntity(issueResponse.getResults().get(0));
+            } else {
+                throw new ApiException(issueResponse.getMessage());
+            }
+        }
+
 
         /**
          * Parses the API model response into this OOP lazy-fetched model+controller.
@@ -375,6 +427,32 @@ public final class Merchant {
                 throw new ApiException(issuesResponse.getMessage());
             }
             return issues;
+        }
+
+        /**
+         * @param newIssue optional/may be null
+         * @return The new/created Issue
+         * @throws ApiException On API call failure
+         */
+        @SuppressWarnings("Duplicates")
+        public Issue createIssue(com.goboomtown.sdk.swagger.model.Issue newIssue) throws ApiException {
+            if (newIssue == null) {
+                newIssue = new com.goboomtown.sdk.swagger.model.Issue();
+            }
+
+            newIssue.setMembersId(membersId);
+            newIssue.setMembersUsersId(id);
+            newIssue.setMembersLocationsId(membersLocationsId);
+
+            IssueCreateRequest request = new IssueCreateRequest();
+            request.setIssues(newIssue);
+
+            IssueResponse issueResponse = ApiUtil.getIssuesApi().createIssue(request);
+            if (issueResponse.getSuccess() != null && issueResponse.getSuccess() && issueResponse.getResults().size() == 1) {
+                return com.goboomtown.client.example.Issue.fromEntity(issueResponse.getResults().get(0));
+            } else {
+                throw new ApiException(issueResponse.getMessage());
+            }
         }
 
 

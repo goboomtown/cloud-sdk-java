@@ -9,7 +9,7 @@ import javax.ws.rs.core.GenericType;
 
 import com.goboomtown.sdk.swagger.model.Error;
 import com.goboomtown.sdk.swagger.model.IssueResponse;
-import com.goboomtown.sdk.swagger.model.Issue;
+import com.goboomtown.sdk.swagger.model.IssueCreateRequest;
 import com.goboomtown.sdk.swagger.model.IssueLogsResponse;
 import com.goboomtown.sdk.swagger.model.EnumerationItemResponse;
 import com.goboomtown.sdk.swagger.model.IssueStatusesResponse;
@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.Map;
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-18T11:59:53.569-06:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-23T11:55:09.982-06:00")
 
 public class IssuesApi {
   private ApiClient apiClient;
@@ -45,9 +45,9 @@ public class IssuesApi {
 
   
   /**
-   * Set a Issue to a cancelled status
-   * Closes a *Issue* with a cancelled status
-   * @param issueId The primary key of the *Issue* to cancel.
+   * Cancel an Issue for a Merchant
+   * Transitions an *Issue* to a &#39;Canceled&#39; status in the workflow.
+   * @param issueId The primary key of the *Issue*
    * @throws ApiException if fails to make API call
    */
   public void cancelIssue(String issueId) throws ApiException {
@@ -91,13 +91,13 @@ public class IssuesApi {
   }
   
   /**
-   * Creates a new Issue
-   * Creates a new *Issue*
-   * @param issues Issue to create
+   * Create an Issue for a Merchant
+   * Creates an *Issue* object related to a *Merchant* object.
+   * @param issues The *Issue* to create
    * @return IssueResponse
    * @throws ApiException if fails to make API call
    */
-  public IssueResponse createIssue(Issue issues) throws ApiException {
+  public IssueResponse createIssue(IssueCreateRequest issues) throws ApiException {
     Object localVarPostBody = issues;
     
     // create path and map variables
@@ -133,9 +133,9 @@ public class IssuesApi {
   }
   
   /**
-   * Add a log to a Issue
-   * Logs notes to an *Issue*
-   * @param issueId The primary key of the related *Issue*
+   * Add an entry to an Issue&#39;s log
+   * Creates a new log entry related to an *Issue* object.
+   * @param issueId The primary key of the *Issue*
    * @param notes Notes to log against the *Issue*
    * @return IssueLogsResponse
    * @throws ApiException if fails to make API call
@@ -189,8 +189,8 @@ public class IssuesApi {
   }
   
   /**
-   * Returns a Issue
-   * Returns a *Issue* record
+   * Get an Issue
+   * Returns an *Issue* object.
    * @param issueId The primary key of the *Issue*
    * @return IssueResponse
    * @throws ApiException if fails to make API call
@@ -237,8 +237,8 @@ public class IssuesApi {
   }
   
   /**
-   * Returns a collection of IssueLogs
-   * Returns a collection of *IssueLog* records
+   * Get a collection of all Issue changes
+   * Returns a paginated collection of all changes for an *Issue* object.
    * @param issueId The primary key of the *Issue*
    * @return IssueLogsResponse
    * @throws ApiException if fails to make API call
@@ -285,8 +285,8 @@ public class IssuesApi {
   }
   
   /**
-   * Returns collection of categories
-   * Returns the categories available for an *Issue*
+   * Get &#39;Category&#39; dictionary for mapping keys to labels
+   * Returns a dictionary for mapping &#39;Category&#39; keys to labels on *Issue* objects.
    * @return EnumerationItemResponse
    * @throws ApiException if fails to make API call
    */
@@ -326,8 +326,8 @@ public class IssuesApi {
   }
   
   /**
-   * Returns collection of resolutions
-   * Returns the resolutions available for an *Issue*
+   * Get &#39;Resolution&#39; dictionary for mapping keys to labels
+   * Returns a dictionary for mapping &#39;Resolution&#39; keys to labels on *Issue* objects.
    * @return EnumerationItemResponse
    * @throws ApiException if fails to make API call
    */
@@ -367,8 +367,8 @@ public class IssuesApi {
   }
   
   /**
-   * Returns collection of statuses
-   * Returns the statuses available for an *Issue*
+   * Get &#39;Status&#39; dictionary for mapping keys to labels
+   * Returns a dictionary for mapping &#39;Status&#39; keys to labels on *Issue* objects.
    * @return EnumerationItemResponse
    * @throws ApiException if fails to make API call
    */
@@ -408,8 +408,8 @@ public class IssuesApi {
   }
   
   /**
-   * Returns collection of types
-   * Returns the types available for an *Issue*
+   * Get &#39;Type&#39; dictionary for mapping keys to labels
+   * Returns a dictionary for mapping &#39;Type&#39; keys to labels on *Issue* objects.
    * @return EnumerationItemResponse
    * @throws ApiException if fails to make API call
    */
@@ -449,8 +449,8 @@ public class IssuesApi {
   }
   
   /**
-   * Returns a collection of IssueStatuses
-   * Returns a collection of *IssueStatuse* records
+   * Get a collection of Issue status changes
+   * Returns a paginated collection of status changes for an *Issue* object.
    * @param issueId The primary key of the *Issue*
    * @return IssueStatusesResponse
    * @throws ApiException if fails to make API call
@@ -497,8 +497,8 @@ public class IssuesApi {
   }
   
   /**
-   * Returns a collection of Issues
-   * Returns a collection of *Issue* records
+   * Get a collection of Issues
+   * Returns a paginated collection of *Issue* objects.
    * @param limit Pagination result limit (defaults to 10)
    * @param start Pagination starting result number (defaults to 0)
    * @param membersId Optionally limit result to this {members_id}
@@ -553,9 +553,9 @@ public class IssuesApi {
   }
   
   /**
-   * Set a Issue to a resolved status
-   * Closes a *Issue* with a resolved status
-   * @param issueId The primary key of the *Issue* to resolve.
+   * Resolve an Issue for a Merchant
+   * Transitions an *Issue* to a &#39;Resolved&#39; status in the workflow.
+   * @param issueId The primary key of the *Issue*
    * @throws ApiException if fails to make API call
    */
   public void resolveIssue(String issueId) throws ApiException {

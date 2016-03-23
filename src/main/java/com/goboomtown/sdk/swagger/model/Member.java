@@ -12,7 +12,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-18T11:59:53.569-06:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-23T11:55:09.982-06:00")
 public class Member   {
   
   private String id = null;
@@ -31,14 +31,14 @@ public class Member   {
 
   
   /**
-   * Primary key.
+   * Primary key
    **/
   public Member id(String id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Primary key.")
+  @ApiModelProperty(example = "null", value = "Primary key")
   @JsonProperty("id")
   public String getId() {
     return id;
@@ -49,14 +49,14 @@ public class Member   {
 
   
   /**
-   * Business name.
+   * Business name
    **/
   public Member name(String name) {
     this.name = name;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Business name.")
+  @ApiModelProperty(example = "null", required = true, value = "Business name")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -67,14 +67,14 @@ public class Member   {
 
   
   /**
-   * Business legal name.
+   * Business legal name
    **/
   public Member nameLegal(String nameLegal) {
     this.nameLegal = nameLegal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Business legal name.")
+  @ApiModelProperty(example = "null", value = "Business legal name")
   @JsonProperty("name_legal")
   public String getNameLegal() {
     return nameLegal;
@@ -85,14 +85,14 @@ public class Member   {
 
   
   /**
-   * Street address.
+   * Address 1
    **/
   public Member street1(String street1) {
     this.street1 = street1;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Street address.")
+  @ApiModelProperty(example = "null", value = "Address 1")
   @JsonProperty("street_1")
   public String getStreet1() {
     return street1;
@@ -103,14 +103,14 @@ public class Member   {
 
   
   /**
-   * Street address continued.
+   * Address 2
    **/
   public Member street2(String street2) {
     this.street2 = street2;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Street address continued.")
+  @ApiModelProperty(example = "null", value = "Address 2")
   @JsonProperty("street_2")
   public String getStreet2() {
     return street2;
@@ -121,14 +121,14 @@ public class Member   {
 
   
   /**
-   * City.
+   * City
    **/
   public Member city(String city) {
     this.city = city;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "City.")
+  @ApiModelProperty(example = "null", value = "City")
   @JsonProperty("city")
   public String getCity() {
     return city;
@@ -139,14 +139,14 @@ public class Member   {
 
   
   /**
-   * State Identifier (2 char code).
+   * State/Province (2 char code)
    **/
   public Member state(String state) {
     this.state = state;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "State Identifier (2 char code).")
+  @ApiModelProperty(example = "null", value = "State/Province (2 char code)")
   @JsonProperty("state")
   public String getState() {
     return state;
@@ -157,14 +157,14 @@ public class Member   {
 
   
   /**
-   * Postal Code.
+   * ZIP/Postal Code
    **/
   public Member zipcode(String zipcode) {
     this.zipcode = zipcode;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Postal Code.")
+  @ApiModelProperty(example = "null", required = true, value = "ZIP/Postal Code")
   @JsonProperty("zipcode")
   public String getZipcode() {
     return zipcode;
@@ -175,14 +175,14 @@ public class Member   {
 
   
   /**
-   * Email address.
+   * Email
    **/
   public Member email(String email) {
     this.email = email;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Email address.")
+  @ApiModelProperty(example = "null", required = true, value = "Email")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -193,14 +193,14 @@ public class Member   {
 
   
   /**
-   * Phone number.
+   * Phone
    **/
   public Member phone(String phone) {
     this.phone = phone;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Phone number.")
+  @ApiModelProperty(example = "null", value = "Phone")
   @JsonProperty("phone")
   public String getPhone() {
     return phone;
@@ -211,14 +211,14 @@ public class Member   {
 
   
   /**
-   * Industry.
+   * Industry
    **/
   public Member industry(String industry) {
     this.industry = industry;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Industry.")
+  @ApiModelProperty(example = "null", value = "Industry")
   @JsonProperty("industry")
   public String getIndustry() {
     return industry;
@@ -229,14 +229,14 @@ public class Member   {
 
   
   /**
-   * Status.
+   * Status
    **/
   public Member status(String status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Status.")
+  @ApiModelProperty(example = "null", value = "Status")
   @JsonProperty("status")
   public String getStatus() {
     return status;
@@ -247,14 +247,14 @@ public class Member   {
 
   
   /**
-   * Date created.
+   * Created
    **/
   public Member created(Date created) {
     this.created = created;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Date created.")
+  @ApiModelProperty(example = "null", value = "Created")
   @JsonProperty("created")
   public Date getCreated() {
     return created;

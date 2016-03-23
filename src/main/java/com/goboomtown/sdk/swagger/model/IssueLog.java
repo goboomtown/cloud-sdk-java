@@ -12,7 +12,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-18T11:59:53.569-06:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-23T11:55:09.982-06:00")
 public class IssueLog   {
   
   private String id = null;
@@ -23,14 +23,14 @@ public class IssueLog   {
 
   
   /**
-   * Primary key.
+   * Primary key
    **/
   public IssueLog id(String id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Primary key.")
+  @ApiModelProperty(example = "null", value = "Primary key")
   @JsonProperty("id")
   public String getId() {
     return id;
@@ -41,14 +41,14 @@ public class IssueLog   {
 
   
   /**
-   * The primary key of the related *Issue*.
+   * Related *Issue* primary key
    **/
   public IssueLog issuesId(String issuesId) {
     this.issuesId = issuesId;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "The primary key of the related *Issue*.")
+  @ApiModelProperty(example = "null", required = true, value = "Related *Issue* primary key")
   @JsonProperty("issues_id")
   public String getIssuesId() {
     return issuesId;
@@ -59,14 +59,14 @@ public class IssueLog   {
 
   
   /**
-   * Differences.
+   * Differences
    **/
   public IssueLog diffLog(String diffLog) {
     this.diffLog = diffLog;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Differences.")
+  @ApiModelProperty(example = "null", value = "Differences")
   @JsonProperty("diff_log")
   public String getDiffLog() {
     return diffLog;
@@ -77,14 +77,14 @@ public class IssueLog   {
 
   
   /**
-   * Notes.
+   * Notes
    **/
   public IssueLog notes(String notes) {
     this.notes = notes;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Notes.")
+  @ApiModelProperty(example = "null", value = "Notes")
   @JsonProperty("notes")
   public String getNotes() {
     return notes;
@@ -95,14 +95,14 @@ public class IssueLog   {
 
   
   /**
-   * Date created.
+   * Created
    **/
   public IssueLog created(Date created) {
     this.created = created;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Date created.")
+  @ApiModelProperty(example = "null", value = "Created")
   @JsonProperty("created")
   public Date getCreated() {
     return created;

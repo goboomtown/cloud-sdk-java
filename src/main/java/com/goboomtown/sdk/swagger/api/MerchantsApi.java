@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.Map;
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-18T11:59:53.569-06:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-23T11:55:09.982-06:00")
 
 public class MerchantsApi {
   private ApiClient apiClient;
@@ -46,9 +46,9 @@ public class MerchantsApi {
 
   
   /**
-   * Creates a new Merchant
-   * Creates a *Merchant* and optionally *MerchantLocation* and *MerchantUser*
-   * @param body The *Merchant* to create
+   * Create/update a Merchant, Location, and User
+   * Creates/updates a *Merchant* object, *Merchant Location* object, and *Merchant User* object in a single atomic transaction.
+   * @param body The *Merchant*, *Merchant Location* and *Merchant User* to create/update
    * @return MemberCreateResponse
    * @throws ApiException if fails to make API call
    */
@@ -93,8 +93,8 @@ public class MerchantsApi {
   }
   
   /**
-   * Returns a Merchant
-   * Returns a *Merchant* ≈
+   * Get a Merchant
+   * Returns a *Merchant* object.
    * @param memberId The primary key of the *Merchant*
    * @return MemberResponse
    * @throws ApiException if fails to make API call
@@ -141,8 +141,8 @@ public class MerchantsApi {
   }
   
   /**
-   * Returns a collection of MerchantUsers
-   * Returns a collection of *MerchantUsers* belonging to a *MerchantLocation*
+   * Get a collection of Users for a Merchant Location
+   * Returns a paginated collection of *Merchant User* objects related to a *Merchant Location* object.
    * @param memberId The primary key of the *Merchant*
    * @return MemberUserResponse
    * @throws ApiException if fails to make API call
@@ -189,8 +189,8 @@ public class MerchantsApi {
   }
   
   /**
-   * Returns a collection of MerchantLocations
-   * Returns a collection of *MerchantLocation* records belonging to a *Merchant*
+   * Get a collection of Locations for a Merchant
+   * Returns a paginated collection of *Merchant Location* objects related to a *Merchant* object.
    * @param memberId The primary key of the *Merchant*
    * @param membersLocationsId An optional members_locations_id to filter the results with
    * @return MemberLocationResponse
@@ -240,8 +240,8 @@ public class MerchantsApi {
   }
   
   /**
-   * Returns collection of industries
-   * Returns the industries available for a *Merchant*
+   * Get &#39;Industry&#39; dictionary for mapping keys to labels
+   * Returns a dictionary for mapping &#39;Industry&#39; keys to labels on *Merchant* objects.
    * @return EnumerationItemResponse
    * @throws ApiException if fails to make API call
    */
@@ -281,8 +281,8 @@ public class MerchantsApi {
   }
   
   /**
-   * Returns collection of statuses
-   * Returns the statuses available for a *Merchant* or *MerchantUsers*
+   * Get &#39;Status&#39; dictionary for mapping keys to labels
+   * Returns a dictionary for mapping &#39;Status&#39; keys to labels on *Merchant* / *Merchant User* objects.
    * @return EnumerationItemResponse
    * @throws ApiException if fails to make API call
    */
@@ -322,9 +322,9 @@ public class MerchantsApi {
   }
   
   /**
-   * Returnsa a collection of MerchantUsers
-   * Returns a collection of *MerchantUser* records belonging to a *Merchant*
-   * @param memberId The id of the *Merchant*
+   * Get a collection of Users for a Merchant
+   * Returns a paginated collection of *Merchant User* objects related to a *Merchant* object.
+   * @param memberId The primary key of the *Merchant*
    * @param userId Optional user_id to filter the results with
    * @return MemberUserResponse
    * @throws ApiException if fails to make API call

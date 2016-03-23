@@ -12,7 +12,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-18T11:59:53.569-06:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-23T11:55:09.982-06:00")
 public class IssueStatus   {
   
   private Date created = null;
@@ -25,14 +25,14 @@ public class IssueStatus   {
 
   
   /**
-   * Date created.
+   * Created
    **/
   public IssueStatus created(Date created) {
     this.created = created;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Date created.")
+  @ApiModelProperty(example = "null", value = "Created")
   @JsonProperty("created")
   public Date getCreated() {
     return created;
@@ -43,14 +43,14 @@ public class IssueStatus   {
 
   
   /**
-   * The type of Issue this log is associated to.
+   * Type
    **/
   public IssueStatus type(String type) {
     this.type = type;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "The type of Issue this log is associated to.")
+  @ApiModelProperty(example = "null", value = "Type")
   @JsonProperty("type")
   public String getType() {
     return type;
@@ -61,14 +61,14 @@ public class IssueStatus   {
 
   
   /**
-   * The status of the issue.
+   * Status
    **/
   public IssueStatus status(String status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "The status of the issue.")
+  @ApiModelProperty(example = "null", value = "Status")
   @JsonProperty("status")
   public String getStatus() {
     return status;
@@ -79,14 +79,14 @@ public class IssueStatus   {
 
   
   /**
-   * Resolution type.
+   * Resolution
    **/
   public IssueStatus resolution(String resolution) {
     this.resolution = resolution;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Resolution type.")
+  @ApiModelProperty(example = "null", value = "Resolution")
   @JsonProperty("resolution")
   public String getResolution() {
     return resolution;
@@ -97,14 +97,14 @@ public class IssueStatus   {
 
   
   /**
-   * Scheduled date/time.
+   * Technician job scheduled
    **/
   public IssueStatus scheduledTime(Date scheduledTime) {
     this.scheduledTime = scheduledTime;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Scheduled date/time.")
+  @ApiModelProperty(example = "null", value = "Technician job scheduled")
   @JsonProperty("scheduled_time")
   public Date getScheduledTime() {
     return scheduledTime;
@@ -115,14 +115,14 @@ public class IssueStatus   {
 
   
   /**
-   * Text describing the issue status/log event.
+   * State description
    **/
   public IssueStatus ticketSummaryText(String ticketSummaryText) {
     this.ticketSummaryText = ticketSummaryText;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Text describing the issue status/log event.")
+  @ApiModelProperty(example = "null", value = "State description")
   @JsonProperty("ticketSummaryText")
   public String getTicketSummaryText() {
     return ticketSummaryText;
@@ -133,14 +133,14 @@ public class IssueStatus   {
 
   
   /**
-   * Text describing the issue status/log event.
+   * Event/trigger description
    **/
   public IssueStatus historySummaryText(String historySummaryText) {
     this.historySummaryText = historySummaryText;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Text describing the issue status/log event.")
+  @ApiModelProperty(example = "null", value = "Event/trigger description")
   @JsonProperty("historySummaryText")
   public String getHistorySummaryText() {
     return historySummaryText;

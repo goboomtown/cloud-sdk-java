@@ -11,7 +11,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-18T11:59:53.569-06:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-23T11:55:09.982-06:00")
 public class MemberUser   {
   
   private String id = null;
@@ -27,14 +27,14 @@ public class MemberUser   {
 
   
   /**
-   * Primary key.
+   * Primary key
    **/
   public MemberUser id(String id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Primary key.")
+  @ApiModelProperty(example = "null", value = "Primary key")
   @JsonProperty("id")
   public String getId() {
     return id;
@@ -45,14 +45,14 @@ public class MemberUser   {
 
   
   /**
-   * The primary key of the related *Merchant*.
+   * Related *Merchant* primary key
    **/
   public MemberUser membersId(String membersId) {
     this.membersId = membersId;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "The primary key of the related *Merchant*.")
+  @ApiModelProperty(example = "null", value = "Related *Merchant* primary key")
   @JsonProperty("members_id")
   public String getMembersId() {
     return membersId;
@@ -63,14 +63,14 @@ public class MemberUser   {
 
   
   /**
-   * The primary key of the related *MerchantLocation*.
+   * Related *MerchantLocation* primary key
    **/
   public MemberUser membersLocationsId(String membersLocationsId) {
     this.membersLocationsId = membersLocationsId;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "The primary key of the related *MerchantLocation*.")
+  @ApiModelProperty(example = "null", value = "Related *MerchantLocation* primary key")
   @JsonProperty("members_locations_id")
   public String getMembersLocationsId() {
     return membersLocationsId;
@@ -81,14 +81,14 @@ public class MemberUser   {
 
   
   /**
-   * First name.
+   * First name
    **/
   public MemberUser firstName(String firstName) {
     this.firstName = firstName;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "First name.")
+  @ApiModelProperty(example = "null", required = true, value = "First name")
   @JsonProperty("first_name")
   public String getFirstName() {
     return firstName;
@@ -99,14 +99,14 @@ public class MemberUser   {
 
   
   /**
-   * Last name.
+   * Last name
    **/
   public MemberUser lastName(String lastName) {
     this.lastName = lastName;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Last name.")
+  @ApiModelProperty(example = "null", required = true, value = "Last name")
   @JsonProperty("last_name")
   public String getLastName() {
     return lastName;
@@ -117,14 +117,14 @@ public class MemberUser   {
 
   
   /**
-   * Concatenation of first and last name.
+   * Full name
    **/
   public MemberUser fullName(String fullName) {
     this.fullName = fullName;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Concatenation of first and last name.")
+  @ApiModelProperty(example = "null", value = "Full name")
   @JsonProperty("full_name")
   public String getFullName() {
     return fullName;
@@ -135,14 +135,14 @@ public class MemberUser   {
 
   
   /**
-   * Email address.
+   * Email
    **/
   public MemberUser email(String email) {
     this.email = email;
     return this;
   }
   
-  @ApiModelProperty(example = "null", required = true, value = "Email address.")
+  @ApiModelProperty(example = "null", required = true, value = "Email")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -153,14 +153,14 @@ public class MemberUser   {
 
   
   /**
-   * SMS capable phone number.
+   * Mobile/SMS phone
    **/
   public MemberUser smsNumber(String smsNumber) {
     this.smsNumber = smsNumber;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "SMS capable phone number.")
+  @ApiModelProperty(example = "null", value = "Mobile/SMS phone")
   @JsonProperty("sms_number")
   public String getSmsNumber() {
     return smsNumber;
@@ -171,14 +171,14 @@ public class MemberUser   {
 
   
   /**
-   * Language.
+   * Language (ISO-2)
    **/
   public MemberUser lang(String lang) {
     this.lang = lang;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Language.")
+  @ApiModelProperty(example = "null", value = "Language (ISO-2)")
   @JsonProperty("lang")
   public String getLang() {
     return lang;
@@ -189,14 +189,14 @@ public class MemberUser   {
 
   
   /**
-   * Status.
+   * Status
    **/
   public MemberUser status(String status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Status.")
+  @ApiModelProperty(example = "null", value = "Status")
   @JsonProperty("status")
   public String getStatus() {
     return status;

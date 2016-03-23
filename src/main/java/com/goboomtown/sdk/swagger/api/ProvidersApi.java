@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Map;
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-18T11:59:53.569-06:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-23T11:55:09.982-06:00")
 
 public class ProvidersApi {
   private ApiClient apiClient;
@@ -43,8 +43,8 @@ public class ProvidersApi {
 
   
   /**
-   * Returns your Provider
-   * Returns your *Provider* record
+   * Get your Provider
+   * Returns a *Provider* object.
    * @return ProviderResponse
    * @throws ApiException if fails to make API call
    */
@@ -84,8 +84,8 @@ public class ProvidersApi {
   }
   
   /**
-   * Returns Merchants
-   * Returns collection of related *Merchant* records
+   * Get a collection of Merchants for your Provider
+   * Returns a paginated collection of *Merchant* objects related to your *Provider* object.
    * @return MemberResponse
    * @throws ApiException if fails to make API call
    */
@@ -125,8 +125,8 @@ public class ProvidersApi {
   }
   
   /**
-   * Returns a ProviderTeam
-   * Returns a *ProviderTeam* record
+   * Get a Provider Team
+   * Returns a *Provider Team* object.
    * @param providerTeamId The primary key of the ProviderTeam
    * @return ProviderTeamResponse
    * @throws ApiException if fails to make API call
@@ -173,8 +173,8 @@ public class ProvidersApi {
   }
   
   /**
-   * Returns your ProviderTeams
-   * Returns a collection of *ProviderTeam* records
+   * Get a collection of Teams for your Provider
+   * Returns a paginated collection of *Provider Team* objects related to your *Provider* object.
    * @return ProviderTeamResponse
    * @throws ApiException if fails to make API call
    */

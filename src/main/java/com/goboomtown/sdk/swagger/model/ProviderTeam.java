@@ -12,7 +12,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-18T11:59:53.569-06:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-23T11:55:09.982-06:00")
 public class ProviderTeam   {
   
   private String id = null;
@@ -42,14 +42,14 @@ public class ProviderTeam   {
 
   
   /**
-   * Primary key.
+   * Primary key
    **/
   public ProviderTeam id(String id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Primary key.")
+  @ApiModelProperty(example = "null", value = "Primary key")
   @JsonProperty("id")
   public String getId() {
     return id;
@@ -60,14 +60,14 @@ public class ProviderTeam   {
 
   
   /**
-   * Name.
+   * Name
    **/
   public ProviderTeam name(String name) {
     this.name = name;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Name.")
+  @ApiModelProperty(example = "null", value = "Name")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -78,14 +78,14 @@ public class ProviderTeam   {
 
   
   /**
-   * Hashtag nickname for group mentions in chat.
+   * Hashtag nickname for group mentions in chat
    **/
   public ProviderTeam nickname(String nickname) {
     this.nickname = nickname;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Hashtag nickname for group mentions in chat.")
+  @ApiModelProperty(example = "null", value = "Hashtag nickname for group mentions in chat")
   @JsonProperty("nickname")
   public String getNickname() {
     return nickname;
@@ -96,14 +96,14 @@ public class ProviderTeam   {
 
   
   /**
-   * Description.
+   * Description
    **/
   public ProviderTeam description(String description) {
     this.description = description;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Description.")
+  @ApiModelProperty(example = "null", value = "Description")
   @JsonProperty("description")
   public String getDescription() {
     return description;
@@ -114,14 +114,14 @@ public class ProviderTeam   {
 
   
   /**
-   * Email address.
+   * Email
    **/
   public ProviderTeam email(String email) {
     this.email = email;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Email address.")
+  @ApiModelProperty(example = "null", value = "Email")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -132,14 +132,14 @@ public class ProviderTeam   {
 
   
   /**
-   * Primary contact phone number.
+   * Phone
    **/
   public ProviderTeam phone(String phone) {
     this.phone = phone;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Primary contact phone number.")
+  @ApiModelProperty(example = "null", value = "Phone")
   @JsonProperty("phone")
   public String getPhone() {
     return phone;
@@ -150,14 +150,14 @@ public class ProviderTeam   {
 
   
   /**
-   * URL to an avatar.
+   * Avatar (URL)
    **/
   public ProviderTeam avatar(String avatar) {
     this.avatar = avatar;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "URL to an avatar.")
+  @ApiModelProperty(example = "null", value = "Avatar (URL)")
   @JsonProperty("avatar")
   public String getAvatar() {
     return avatar;
@@ -168,14 +168,14 @@ public class ProviderTeam   {
 
   
   /**
-   * Automatically routes related merchant issues to this ProviderTeam.
+   * Automatically set this ProviderTeam as first contact on new *Issues* from related *Merchants*
    **/
   public ProviderTeam autoAssignRoute(Boolean autoAssignRoute) {
     this.autoAssignRoute = autoAssignRoute;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Automatically routes related merchant issues to this ProviderTeam.")
+  @ApiModelProperty(example = "null", value = "Automatically set this ProviderTeam as first contact on new *Issues* from related *Merchants*")
   @JsonProperty("auto_assign_route")
   public Boolean getAutoAssignRoute() {
     return autoAssignRoute;
@@ -186,14 +186,14 @@ public class ProviderTeam   {
 
   
   /**
-   * Automatically assigns this ProviderTeam as the sponsor for related merchants.
+   * Automatically set this ProviderTeam as sponsor for related *Merchant* billing
    **/
   public ProviderTeam autoAssignSponsor(Boolean autoAssignSponsor) {
     this.autoAssignSponsor = autoAssignSponsor;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Automatically assigns this ProviderTeam as the sponsor for related merchants.")
+  @ApiModelProperty(example = "null", value = "Automatically set this ProviderTeam as sponsor for related *Merchant* billing")
   @JsonProperty("auto_assign_sponsor")
   public Boolean getAutoAssignSponsor() {
     return autoAssignSponsor;
@@ -204,14 +204,14 @@ public class ProviderTeam   {
 
   
   /**
-   * Status.
+   * Status
    **/
   public ProviderTeam status(String status) {
     this.status = status;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Status.")
+  @ApiModelProperty(example = "null", value = "Status")
   @JsonProperty("status")
   public String getStatus() {
     return status;
@@ -222,14 +222,14 @@ public class ProviderTeam   {
 
   
   /**
-   * Type / Category.
+   * Type/Category
    **/
   public ProviderTeam type(String type) {
     this.type = type;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Type / Category.")
+  @ApiModelProperty(example = "null", value = "Type/Category")
   @JsonProperty("type")
   public String getType() {
     return type;
@@ -240,14 +240,14 @@ public class ProviderTeam   {
 
   
   /**
-   * Exclusive within it's type / category.
+   * This ProviderTeam is exclusive within its type/category
    **/
   public ProviderTeam exclusive(Boolean exclusive) {
     this.exclusive = exclusive;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Exclusive within it's type / category.")
+  @ApiModelProperty(example = "null", value = "This ProviderTeam is exclusive within its type/category")
   @JsonProperty("exclusive")
   public Boolean getExclusive() {
     return exclusive;
@@ -258,14 +258,14 @@ public class ProviderTeam   {
 
   
   /**
-   * Published to the Connect App.
+   * This ProviderTeam is published in the Connect app
    **/
   public ProviderTeam published(Boolean published) {
     this.published = published;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Published to the Connect App.")
+  @ApiModelProperty(example = "null", value = "This ProviderTeam is published in the Connect app")
   @JsonProperty("published")
   public Boolean getPublished() {
     return published;
@@ -276,14 +276,14 @@ public class ProviderTeam   {
 
   
   /**
-   * Name, as publushed in the Connect App.
+   * Name of this ProviderTeam as it appears in the Connect app
    **/
   public ProviderTeam publishedName(String publishedName) {
     this.publishedName = publishedName;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Name, as publushed in the Connect App.")
+  @ApiModelProperty(example = "null", value = "Name of this ProviderTeam as it appears in the Connect app")
   @JsonProperty("published_name")
   public String getPublishedName() {
     return publishedName;
@@ -294,14 +294,14 @@ public class ProviderTeam   {
 
   
   /**
-   * Enable private label branding.
+   * This ProviderTeam has private label branding in the Connect app
    **/
   public ProviderTeam privateLabel(Boolean privateLabel) {
     this.privateLabel = privateLabel;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Enable private label branding.")
+  @ApiModelProperty(example = "null", value = "This ProviderTeam has private label branding in the Connect app")
   @JsonProperty("private_label")
   public Boolean getPrivateLabel() {
     return privateLabel;
@@ -312,14 +312,14 @@ public class ProviderTeam   {
 
   
   /**
-   * Private label brand color, used if private_label is true.
+   * Private label brand color (if private_label is true)
    **/
   public ProviderTeam brandColor1(String brandColor1) {
     this.brandColor1 = brandColor1;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Private label brand color, used if private_label is true.")
+  @ApiModelProperty(example = "null", value = "Private label brand color (if private_label is true)")
   @JsonProperty("brand_color1")
   public String getBrandColor1() {
     return brandColor1;
@@ -330,14 +330,14 @@ public class ProviderTeam   {
 
   
   /**
-   * Private label logo, used if private_label is true.
+   * Private label logo (if private_label is true)
    **/
   public ProviderTeam brandLogo1x(String brandLogo1x) {
     this.brandLogo1x = brandLogo1x;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Private label logo, used if private_label is true.")
+  @ApiModelProperty(example = "null", value = "Private label logo (if private_label is true)")
   @JsonProperty("brand_logo_1x")
   public String getBrandLogo1x() {
     return brandLogo1x;
@@ -348,14 +348,14 @@ public class ProviderTeam   {
 
   
   /**
-   * Private label logo (x2), used if private_label is true.
+   * Private label logo [x2] (if private_label is true)
    **/
   public ProviderTeam brandLogo2x(String brandLogo2x) {
     this.brandLogo2x = brandLogo2x;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Private label logo (x2), used if private_label is true.")
+  @ApiModelProperty(example = "null", value = "Private label logo [x2] (if private_label is true)")
   @JsonProperty("brand_logo_2x")
   public String getBrandLogo2x() {
     return brandLogo2x;
@@ -366,14 +366,14 @@ public class ProviderTeam   {
 
   
   /**
-   * Private label logo (x3), used if private_label is true.
+   * Private label logo [x3] (if private_label is true)
    **/
   public ProviderTeam brandLogo3x(String brandLogo3x) {
     this.brandLogo3x = brandLogo3x;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Private label logo (x3), used if private_label is true.")
+  @ApiModelProperty(example = "null", value = "Private label logo [x3] (if private_label is true)")
   @JsonProperty("brand_logo_3x")
   public String getBrandLogo3x() {
     return brandLogo3x;
@@ -384,14 +384,14 @@ public class ProviderTeam   {
 
   
   /**
-   * Primary support email address.
+   * Support Email
    **/
   public ProviderTeam supportEmail(String supportEmail) {
     this.supportEmail = supportEmail;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Primary support email address.")
+  @ApiModelProperty(example = "null", value = "Support Email")
   @JsonProperty("support_email")
   public String getSupportEmail() {
     return supportEmail;
@@ -402,14 +402,14 @@ public class ProviderTeam   {
 
   
   /**
-   * Primary support phone number.
+   * Support Phone
    **/
   public ProviderTeam supportPhone(String supportPhone) {
     this.supportPhone = supportPhone;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Primary support phone number.")
+  @ApiModelProperty(example = "null", value = "Support Phone")
   @JsonProperty("support_phone")
   public String getSupportPhone() {
     return supportPhone;
@@ -420,14 +420,14 @@ public class ProviderTeam   {
 
   
   /**
-   * Primary support website.
+   * Support Website (URL)
    **/
   public ProviderTeam supportUrl(String supportUrl) {
     this.supportUrl = supportUrl;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Primary support website.")
+  @ApiModelProperty(example = "null", value = "Support Website (URL)")
   @JsonProperty("support_url")
   public String getSupportUrl() {
     return supportUrl;
@@ -438,14 +438,14 @@ public class ProviderTeam   {
 
   
   /**
-   * Date created.
+   * Created
    **/
   public ProviderTeam created(Date created) {
     this.created = created;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Date created.")
+  @ApiModelProperty(example = "null", value = "Created")
   @JsonProperty("created")
   public Date getCreated() {
     return created;
@@ -456,14 +456,14 @@ public class ProviderTeam   {
 
   
   /**
-   * Date last updated.
+   * Updated
    **/
   public ProviderTeam updated(Date updated) {
     this.updated = updated;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Date last updated.")
+  @ApiModelProperty(example = "null", value = "Updated")
   @JsonProperty("updated")
   public Date getUpdated() {
     return updated;

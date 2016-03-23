@@ -2,6 +2,7 @@ package com.goboomtown.sdk.swagger.model;
 
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.goboomtown.sdk.swagger.model.Issue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -12,25 +13,25 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 @javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-23T11:55:09.982-06:00")
-public class EnumerationItem   {
+public class IssueCreateRequest   {
   
-  private String value = null;
+  private Issue issues = null;
 
   
   /**
    **/
-  public EnumerationItem value(String value) {
-    this.value = value;
+  public IssueCreateRequest issues(Issue issues) {
+    this.issues = issues;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "")
-  @JsonProperty("value")
-  public String getValue() {
-    return value;
+  @ApiModelProperty(example = "null", required = true, value = "")
+  @JsonProperty("issues")
+  public Issue getIssues() {
+    return issues;
   }
-  public void setValue(String value) {
-    this.value = value;
+  public void setIssues(Issue issues) {
+    this.issues = issues;
   }
 
   
@@ -43,21 +44,21 @@ public class EnumerationItem   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    EnumerationItem enumerationItem = (EnumerationItem) o;
-    return Objects.equals(this.value, enumerationItem.value);
+    IssueCreateRequest issueCreateRequest = (IssueCreateRequest) o;
+    return Objects.equals(this.issues, issueCreateRequest.issues);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(value);
+    return Objects.hash(issues);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class EnumerationItem {\n");
+    sb.append("class IssueCreateRequest {\n");
     
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    issues: ").append(toIndentedString(issues)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -198,12 +198,15 @@ public final class Provider {
         createRequest.setMembersUsers(user);
 
         MemberCreateResponse response = ApiUtil.getMerchantsApi().createMember(createRequest);
-
-        return new CreateMerchantResult(
-                Merchant.fromEntity(response.getResults().getMember()),
-                Merchant.User.fromEntity(response.getResults().getMemberUser()),
-                Merchant.Location.fromEntity(response.getResults().getMemberLocation())
-        );
+        if (response.getSuccess() != null && response.getSuccess()) {
+            return new CreateMerchantResult(
+                    Merchant.fromEntity(response.getResults().getMember()),
+                    Merchant.User.fromEntity(response.getResults().getMemberUser()),
+                    Merchant.Location.fromEntity(response.getResults().getMemberLocation())
+            );
+        } else {
+            throw new ApiException(response.getMessage());
+        }
     }
 
     /**
@@ -233,6 +236,32 @@ public final class Provider {
             return com.goboomtown.client.example.Issue.fromEntity(issuesResponse.getResults().get(0));
         } else {
             throw new ApiException(issuesResponse.getMessage());
+        }
+    }
+
+    /**
+     * @param newIssue optional/may be null
+     * @return The new/created Issue
+     * @throws ApiException On API call failure
+     */
+    @SuppressWarnings("Duplicates")
+    public Issue createIssue(String memberId, String userId, String locationId, com.goboomtown.sdk.swagger.model.Issue newIssue) throws ApiException {
+        if (newIssue == null) {
+            newIssue = new com.goboomtown.sdk.swagger.model.Issue();
+        }
+
+        newIssue.setMembersId(memberId);
+        newIssue.setMembersUsersId(userId);
+        newIssue.setMembersLocationsId(locationId);
+
+        IssueCreateRequest request = new IssueCreateRequest();
+        request.setIssues(newIssue);
+
+        IssueResponse issueResponse = ApiUtil.getIssuesApi().createIssue(request);
+        if (issueResponse.getSuccess() != null && issueResponse.getSuccess() && issueResponse.getResults().size() == 1) {
+            return com.goboomtown.client.example.Issue.fromEntity(issueResponse.getResults().get(0));
+        } else {
+            throw new ApiException(issueResponse.getMessage());
         }
     }
 

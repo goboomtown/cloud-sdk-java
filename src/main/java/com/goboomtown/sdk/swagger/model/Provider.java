@@ -12,7 +12,7 @@ import java.util.Date;
 
 
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-18T11:59:53.569-06:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-03-23T11:55:09.982-06:00")
 public class Provider   {
   
   private String id = null;
@@ -38,14 +38,14 @@ public class Provider   {
 
   
   /**
-   * Primary key.
+   * Primary key
    **/
   public Provider id(String id) {
     this.id = id;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Primary key.")
+  @ApiModelProperty(example = "null", value = "Primary key")
   @JsonProperty("id")
   public String getId() {
     return id;
@@ -56,14 +56,14 @@ public class Provider   {
 
   
   /**
-   * Business name.
+   * Business name
    **/
   public Provider name(String name) {
     this.name = name;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Business name.")
+  @ApiModelProperty(example = "null", value = "Business name")
   @JsonProperty("name")
   public String getName() {
     return name;
@@ -74,14 +74,14 @@ public class Provider   {
 
   
   /**
-   * Business legal name.
+   * Business legal name
    **/
   public Provider nameLegal(String nameLegal) {
     this.nameLegal = nameLegal;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Business legal name.")
+  @ApiModelProperty(example = "null", value = "Business legal name")
   @JsonProperty("name_legal")
   public String getNameLegal() {
     return nameLegal;
@@ -92,14 +92,14 @@ public class Provider   {
 
   
   /**
-   * Hashtag nickname for group mentions in chat.
+   * Hashtag nickname for group mentions in chat
    **/
   public Provider nickname(String nickname) {
     this.nickname = nickname;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Hashtag nickname for group mentions in chat.")
+  @ApiModelProperty(example = "null", value = "Hashtag nickname for group mentions in chat")
   @JsonProperty("nickname")
   public String getNickname() {
     return nickname;
@@ -110,14 +110,14 @@ public class Provider   {
 
   
   /**
-   * The communication channel id.
+   * The communication channel id
    **/
   public Provider commId(String commId) {
     this.commId = commId;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "The communication channel id.")
+  @ApiModelProperty(example = "null", value = "The communication channel id")
   @JsonProperty("comm_id")
   public String getCommId() {
     return commId;
@@ -128,14 +128,14 @@ public class Provider   {
 
   
   /**
-   * Description.
+   * Description
    **/
   public Provider description(String description) {
     this.description = description;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Description.")
+  @ApiModelProperty(example = "null", value = "Description")
   @JsonProperty("description")
   public String getDescription() {
     return description;
@@ -146,14 +146,14 @@ public class Provider   {
 
   
   /**
-   * Street address.
+   * Address 1
    **/
   public Provider street1(String street1) {
     this.street1 = street1;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Street address.")
+  @ApiModelProperty(example = "null", value = "Address 1")
   @JsonProperty("street_1")
   public String getStreet1() {
     return street1;
@@ -164,14 +164,14 @@ public class Provider   {
 
   
   /**
-   * Street address continued.
+   * Address 2
    **/
   public Provider street2(String street2) {
     this.street2 = street2;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Street address continued.")
+  @ApiModelProperty(example = "null", value = "Address 2")
   @JsonProperty("street_2")
   public String getStreet2() {
     return street2;
@@ -182,14 +182,14 @@ public class Provider   {
 
   
   /**
-   * City.
+   * City
    **/
   public Provider city(String city) {
     this.city = city;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "City.")
+  @ApiModelProperty(example = "null", value = "City")
   @JsonProperty("city")
   public String getCity() {
     return city;
@@ -200,14 +200,14 @@ public class Provider   {
 
   
   /**
-   * State Identifier (2 char code).
+   * State/Province (2 char code)
    **/
   public Provider state(String state) {
     this.state = state;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "State Identifier (2 char code).")
+  @ApiModelProperty(example = "null", value = "State/Province (2 char code)")
   @JsonProperty("state")
   public String getState() {
     return state;
@@ -218,14 +218,14 @@ public class Provider   {
 
   
   /**
-   * Postal Code.
+   * ZIP/Postal Code
    **/
   public Provider zipcode(String zipcode) {
     this.zipcode = zipcode;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Postal Code.")
+  @ApiModelProperty(example = "null", value = "ZIP/Postal Code")
   @JsonProperty("zipcode")
   public String getZipcode() {
     return zipcode;
@@ -236,14 +236,14 @@ public class Provider   {
 
   
   /**
-   * Business location latitude.
+   * Latitude
    **/
   public Provider latitude(Float latitude) {
     this.latitude = latitude;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Business location latitude.")
+  @ApiModelProperty(example = "null", value = "Latitude")
   @JsonProperty("latitude")
   public Float getLatitude() {
     return latitude;
@@ -254,14 +254,14 @@ public class Provider   {
 
   
   /**
-   * Business location longitude.
+   * Longitude
    **/
   public Provider longitude(Float longitude) {
     this.longitude = longitude;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Business location longitude.")
+  @ApiModelProperty(example = "null", value = "Longitude")
   @JsonProperty("longitude")
   public Float getLongitude() {
     return longitude;
@@ -272,14 +272,14 @@ public class Provider   {
 
   
   /**
-   * Default ProviderTeam's id.
+   * Default ProviderTeam's id
    **/
   public Provider defaultPartnersTeamsId(String defaultPartnersTeamsId) {
     this.defaultPartnersTeamsId = defaultPartnersTeamsId;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Default ProviderTeam's id.")
+  @ApiModelProperty(example = "null", value = "Default ProviderTeam's id")
   @JsonProperty("default_partners_teams_id")
   public String getDefaultPartnersTeamsId() {
     return defaultPartnersTeamsId;
@@ -290,14 +290,14 @@ public class Provider   {
 
   
   /**
-   * Email address.
+   * Email
    **/
   public Provider email(String email) {
     this.email = email;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Email address.")
+  @ApiModelProperty(example = "null", value = "Email")
   @JsonProperty("email")
   public String getEmail() {
     return email;
@@ -308,14 +308,14 @@ public class Provider   {
 
   
   /**
-   * Primary contact phone number.
+   * Phone
    **/
   public Provider phone(String phone) {
     this.phone = phone;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Primary contact phone number.")
+  @ApiModelProperty(example = "null", value = "Phone")
   @JsonProperty("phone")
   public String getPhone() {
     return phone;
@@ -326,14 +326,14 @@ public class Provider   {
 
   
   /**
-   * Business website/URL.
+   * Web site (URL)
    **/
   public Provider website(String website) {
     this.website = website;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Business website/URL.")
+  @ApiModelProperty(example = "null", value = "Web site (URL)")
   @JsonProperty("website")
   public String getWebsite() {
     return website;
@@ -344,14 +344,14 @@ public class Provider   {
 
   
   /**
-   * URL to an avatar.
+   * Avatar (URL)
    **/
   public Provider avatar(String avatar) {
     this.avatar = avatar;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "URL to an avatar.")
+  @ApiModelProperty(example = "null", value = "Avatar (URL)")
   @JsonProperty("avatar")
   public String getAvatar() {
     return avatar;
@@ -362,14 +362,14 @@ public class Provider   {
 
   
   /**
-   * Date created.
+   * Created
    **/
   public Provider created(Date created) {
     this.created = created;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Date created.")
+  @ApiModelProperty(example = "null", value = "Created")
   @JsonProperty("created")
   public Date getCreated() {
     return created;
@@ -380,14 +380,14 @@ public class Provider   {
 
   
   /**
-   * Date last updated.
+   * Updated
    **/
   public Provider updated(Date updated) {
     this.updated = updated;
     return this;
   }
   
-  @ApiModelProperty(example = "null", value = "Date last updated.")
+  @ApiModelProperty(example = "null", value = "Updated")
   @JsonProperty("updated")
   public Date getUpdated() {
     return updated;
